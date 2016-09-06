@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/cobranzas/cobranzas.github.io/issues"
   },
-  "homepage": "https://github.com/cobranzas/cobranzas.github.io#readme"
+  "homepage": "https://github.com/cobranzas/cobranzas.github.io#readme",
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "systemjs": "^0.19.37"
+  }
 }

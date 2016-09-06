@@ -14,7 +14,8 @@ var JTHead = _react2['default'].createClass({
 	displayName: 'JTHead',
 
 	render: function render() {
-		var headers = this.props.headers;
+
+		var data = this.props.data || [];
 
 		return _react2['default'].createElement(
 			'thead',
@@ -22,7 +23,7 @@ var JTHead = _react2['default'].createClass({
 			_react2['default'].createElement(
 				'tr',
 				null,
-				headers.map(function (header, i) {
+				data.map(function (header, i) {
 					return _react2['default'].createElement(
 						'th',
 						{ key: i },
@@ -33,6 +34,9 @@ var JTHead = _react2['default'].createClass({
 		);
 	}
 });
+JTHead.defaultProps = {
+	data: []
+};
 
 exports['default'] = JTHead;
 module.exports = exports['default'];

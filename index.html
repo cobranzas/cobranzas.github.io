@@ -1,5 +1,32 @@
 <html>
-  <head>
-    <title>Cobranzas.com ::..</title>
-  </head>
+<head>
+	<title>Cobranzas.com ::..</title>
+	<script type="text/javascript" src="/node_modules/systemjs/dist/system.js"></script>
+	<script type="text/javascript" src="/system.config.js"></script>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+		SystemJS.import('react').then(function(React){
+			SystemJS.import('react-dom').then(function(ReactDOM){
+				SystemJS.import('/components/JTable.js').then(function(JTable){
+
+					var data = [{
+						col1 : 'data11',
+						col2 : 'data12',
+					}, {
+						col1 : 'data21',
+						col2 : 'data22'
+					}]
+					var el = React.createElement(JTable, {
+						headers : Object.keys(data[0]),
+						data : data
+					});
+					ReactDOM.render(el, document.getElementById('app'))
+
+				});
+			});
+		});
+	</script>
+</body>
 </html>

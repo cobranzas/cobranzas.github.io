@@ -3,12 +3,12 @@ import React from 'react';
 var JTHead = React.createClass({
 	render : function render(){
 
-		var { headers } = this.props;
+		var data = this.props.data || [];
 
 		return (
 			<thead>
 				<tr>
-					{headers.map(function(header, i){
+					{data.map(function(header, i){
 						return (<th key={i}>{header}</th>)
 					})}
 				</tr>
@@ -16,5 +16,8 @@ var JTHead = React.createClass({
 			);
 	}
 });
+JTHead.defaultProps = {
+	data : []
+}
 
 export default JTHead;
